@@ -1,1 +1,270 @@
+/* Base styles – mobile first */
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Navigation */
+
+.nav-toggle {
+  background: none;
+  border: 1px solid #555;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: none; /* hidden on mobile by default */
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3rem 0.4rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background: #444;
+}
+
+/* show menu when body has .nav-open */
+body.nav-open .nav-links {
+  display: flex;
+}
+
+/* Layout */
+
+main {
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 0 1rem 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.page-title {
+  margin-top: 0;
+}
+
+.hero {
+  padding: 1rem;
+  background: #e8f0ff;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  margin-top: 0;
+}
+
+.grid-2 {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Tables */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+/* Make tables scrollable on small screens */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Images */
+
+img.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* Lists */
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* Quiz styles */
+
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz-question {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.quiz-feedback {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.quiz-feedback.correct {
+  color: #0a7a28;
+}
+
+.quiz-feedback.incorrect {
+  color: #b00020;
+}
+
+.quiz-results {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #eef7ff;
+}
+
+/* Form controls */
+
+input[type="text"],
+input[type="email"],
+button {
+  font: inherit;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
+
+.quiz-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border-radius: 4px;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: #1e88e5;
+  color: #fff;
+}
+
+button[type="reset"] {
+  background: #ccc;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet and up */
+@media (min-width: 700px) {
+  header {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .header-inner {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .nav-toggle {
+    display: none; /* hide burger */
+  }
+
+  nav {
+    margin-top: 0;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    align-items: center;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1000px) {
+  .grid-2 {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
