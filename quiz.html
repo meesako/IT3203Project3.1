@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz – Intro to Web Development</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">Intro to Web Development</div>
+      <button class="nav-toggle" type="button">Menu</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="concepts.html">Key Concepts</a></li>
+          <li><a href="frontend.html">HTML &amp; CSS</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Web Development Quiz</h1>
+    <p>
+      Answer the questions below and click Submit to see your score. You can
+      reset the quiz and try again as many times as you like.
+    </p>
+
+    <div class="quiz-container">
+      <form id="quiz-form">
+        <!-- Q1: Fill in the blank -->
+        <div class="quiz-question">
+          <p><strong>1. Fill in the blank:</strong></p>
+          <p>HTML stands for <em>_________</em>.</p>
+          <input type="text" name="q1" placeholder="Type your answer here" />
+          <div id="q1-feedback" class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q2: Single choice -->
+        <div class="quiz-question">
+          <p><strong>2. Which language is mainly responsible for page styling?</strong></p>
+          <label><input type="radio" name="q2" value="html" /> HTML</label><br />
+          <label><input type="radio" name="q2" value="css" /> CSS</label><br />
+          <label><input type="radio" name="q2" value="js" /> JavaScript</label>
+          <div id="q2-feedback" class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q3: Single choice -->
+        <div class="quiz-question">
+          <p><strong>3. JavaScript is mainly used to add what to a webpage?</strong></p>
+          <label><input type="radio" name="q3" value="structure" /> Structure</label><br />
+          <label><input type="radio" name="q3" value="interactivity" /> Interactivity</label><br />
+          <label><input type="radio" name="q3" value="images" /> Images</label>
+          <div id="q3-feedback" class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q4: Single choice -->
+        <div class="quiz-question">
+          <p><strong>4. Which HTML tag is used to create a hyperlink?</strong></p>
+          <label><input type="radio" name="q4" value="p" /> &lt;p&gt;</label><br />
+          <label><input type="radio" name="q4" value="a" /> &lt;a&gt;</label><br />
+          <label><input type="radio" name="q4" value="h1" /> &lt;h1&gt;</label>
+          <div id="q4-feedback" class="quiz-feedback"></div>
+        </div>
+
+        <!-- Q5: Multi-select -->
+        <div class="quiz-question">
+          <p><strong>5. Select all that are core frontend technologies:</strong></p>
+          <label><input type="checkbox" name="q5-html" /> HTML</label><br />
+          <label><input type="checkbox" name="q5-css" /> CSS</label><br />
+          <label><input type="checkbox" name="q5-js" /> JavaScript</label><br />
+          <label><input type="checkbox" name="q5-python" /> Python</label>
+          <div id="q5-feedback" class="quiz-feedback"></div>
+        </div>
+
+        <div class="quiz-buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+
+        <div id="quiz-results" class="quiz-results" style="display: none;"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Intro to Web Development – Student: Kaseem Rogers
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
